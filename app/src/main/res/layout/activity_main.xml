@@ -45,7 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/ib_brush"
+        app:layout_constraintBottom_toTopOf="@+id/ll_action_buttons"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fl_drawingView_container">
@@ -138,16 +138,38 @@
             />
         
     </LinearLayout>
-
-    <ImageButton
-        android:id="@+id/ib_brush"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_margin="5dp"
-        android:contentDescription="brush image"
-        android:scaleType="fitXY"
-        android:src="@drawable/ic_brush"
+    
+    <LinearLayout
+        android:id="@+id/ll_action_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+
+        >
+
+        <ImageButton
+            android:id="@+id/ib_gallery"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:contentDescription="gallery image"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_gallery" />
+
+        <ImageButton
+            android:id="@+id/ib_brush"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:contentDescription="brush image"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_brush" />
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
