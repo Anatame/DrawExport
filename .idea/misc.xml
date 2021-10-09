@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidStudioProjects/DrawingApp/app/src/main/res/drawable/background_drawing_view_layout.xml" value="0.21770833333333334" />
         <entry key="..\:/AndroidStudioProjects/DrawingApp/app/src/main/res/layout/activity_main.xml" value="0.16168478260869565" />
       </map>
     </option>
