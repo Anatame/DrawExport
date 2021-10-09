@@ -6,16 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.anatame.drawingapp.DrawingView
-        android:id="@+id/dvDrawingView"
+    <FrameLayout
+        android:id="@+id/fl_drawingView_container"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="5dp"
+        android:padding="1dp"
         android:background="@drawable/background_drawing_view_layout"
         app:layout_constraintBottom_toTopOf="@+id/ll_pain_colors"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        >
+        
+        <ImageView
+            android:id="@+id/iv_background"
+            android:scaleType="centerCrop"
+            android:contentDescription="background image"
+            android:src="@drawable/image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+        <com.anatame.drawingapp.DrawingView
+            android:id="@+id/dvDrawingView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#80FFFFFF"
+            />
+
+    </FrameLayout>
+
+
 
     <LinearLayout
         android:id="@+id/ll_pain_colors"
@@ -26,7 +48,7 @@
         app:layout_constraintBottom_toTopOf="@+id/ib_brush"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dvDrawingView">
+        app:layout_constraintTop_toBottomOf="@+id/fl_drawingView_container">
 
 
         <ImageButton
