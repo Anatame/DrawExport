@@ -1,17 +1,31 @@
 package com.anatame.drawingapp
 
 import android.app.Dialog
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageButton
+import androidx.core.content.ContextCompat
+import androidx.core.view.get
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.dialog_brush_size.*
 
 class MainActivity : AppCompatActivity() {
+
+    private var mImageButtonCurrentPaint: ImageButton? = null
+    var mContext: Context = this@MainActivity
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         dvDrawingView.setSizeForBrush(20.toFloat())
+
+        mImageButtonCurrentPaint = ll_pain_colors[1] as ImageButton
+        mImageButtonCurrentPaint!!.setImageDrawable(
+            ContextCompat.getDrawable(mContext, R.drawable.pallet_selected))
+
         ib_brush.setOnClickListener{
             showBrushSizeChooserDialog()
         }
