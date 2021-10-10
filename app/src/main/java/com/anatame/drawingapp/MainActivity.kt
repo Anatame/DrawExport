@@ -53,6 +53,10 @@ class MainActivity : AppCompatActivity() {
                 requestStoragePermission()
             }
         }
+
+        ib_undo.setOnClickListener{
+            dvDrawingView.onClickUndo()
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
